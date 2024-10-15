@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .background-image {
+            position: relative;
+            background-image: url(asset/light.jpg);
+            background-size: cover; /* Adjusts the background image to cover the element */
+            height: 100vh; /* Full height */
+        }
+
+        .background-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the RGBA value to control transparency */
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2; /* Places content above the overlay */
+            color: black; /* Text color */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="content">
+            <h1>Your Heading</h1>
+            <p>This content is above the transparent background.</p>
+        </div>
+    </div>
+</body>
+</html>

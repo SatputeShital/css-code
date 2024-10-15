@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* Main styling for background image */
+        .background-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url(asset/lamp.jpg);
+            background-size: cover; /* Ensure the image covers the entire div */
+            background-position: center; /* Center the background image */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Flexbox for centering content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            text-align: center; /* Center text */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+
+        /* Styling for the main website title */
+        .website-title {
+            font-size: 4rem; /* Adjust size as needed */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Styling for the subheading */
+        .website-subtitle {
+            font-size: 1.5rem; /* Adjust size as needed */
+            margin-top: 10px; /* Space between title and subtitle */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div>
+            <h1 class="website-title">Your Website Name</h1>
+            <p class="website-subtitle">Your Catchy Subheading Here</p>
+        </div>
+    </div>
+</body>
+</html>
