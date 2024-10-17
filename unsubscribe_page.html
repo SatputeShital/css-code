@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,
+     6..12,200..1000&display=swap" rel="stylesheet">
+    <!-- font-family: "Afacad Flux", sans-serif;
+     font-family: "Nunito Sans", sans-serif; -->
+    <title>Unsubscribe Page</title>
+    <!-- Internal Css -->
+     <style>
+
+        body
+        {
+            background-color:rgb(205, 209, 173);
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 20 px;
+        }
+
+        #unsubscribe
+        {
+            
+            margin: 60px auto;
+            margin-top: 20px;
+            background-color: rgb(231, 227, 227);
+            border: 1px;
+            border-radius: 5px;
+            width: 23vw;
+            height:600px;
+            padding: 30px;
+        }
+        
+        #main
+        {
+            margin: 5px;
+            /* margin-top: 6px; */
+            padding-top: 6px;
+            background-color: white;
+            border: 1px;
+            border-radius: 10px;
+            height:570px;
+
+        }
+
+        .form
+        {
+            margin: 20px;
+        }
+        
+        p
+        {
+            color: white;
+            font-family: "Afacad Flux", sans-serif;
+            font-size: 14px;
+            font-weight: lighter;
+            border:1px;
+            /* margin:20px; */
+            padding: 20px;
+            background-color: #0096c7;
+            border-radius: 6px;
+        }
+
+        label, input,textarea
+        {
+            display: block;
+            /* margin-bottom: 2px; */
+        }
+         
+        label
+        {
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: bold;
+        }
+
+        sup
+        {
+            color: red;
+        }
+        input
+        {
+            font-family: "Afacad Flux", sans-serif;
+            border-radius: 4px;
+            height: 28px;
+            width: 295px;
+            background-color: rgb(240, 240, 240);
+        }
+        textarea
+        {
+            font-family: "Afacad Flux", sans-serif;
+            border-radius: 4px;
+            height: 70px;
+            width: 295px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        /* input ,textarea
+        {
+            margin-top:0;
+        } */
+        
+        button
+        {
+            font-weight: bold;
+            height: 25px;
+            width: 100px; 
+            border-radius: 4px;
+            position: absolute;
+            right: 600px;
+            top: 570px;
+        }
+        
+
+     </style>
+</head>
+<body>
+  <section id="unsubscribe">
+      <section id="main">
+        <h3 class="form">Subscriber</h3>
+        <hr class="form">
+        <p class="form">
+            We're sorry to see you go, but hey, no hard feelings, hopefully we will see you back one day. <br>
+
+           Please fill in your email address in order to unsubscribe from the list. <br>
+
+            You will receive an email to confirm your unsubscription, just to make sure this is not an accident or somebody else tries to unsubscribe you
+        </p>
+        <label for="" class="form">Email <sup>*</sup></label>
+        <input class="form" type="email" autofocus placeholder="abc@gmail.com">
+        <label class="form" for="">Unsubscribe Reason:</label>
+        <textarea class="form" type="text" placeholder="Unsubscribe reason.." name="" id="" ></textarea>
+      
+        <button class="form" type="submit">Unsubscribe</button>
+      
+    </section>
+  </section>
+</body>
+</html>
