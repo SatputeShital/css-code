@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Georama:ital,wght@0,100..900;1,
+100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>New Sign-in</title>
+
+    <style>
+
+        body
+        {
+            background-color: rgb(215, 214, 214);
+        }
+        #main
+        {
+          background-color: white;
+          margin: 60px auto;
+          margin-top: 20px;
+          border: 5px;
+          border-radius: 10px;
+          border-color:gray;
+          width: 50vw;
+          height:600px;
+          padding: 30px;
+          text-align: center;
+        }
+       
+
+        
+        #g
+        {
+            color: blue;
+        }
+        #o
+        {
+            color: red;
+        }
+        #o1
+        {
+            color: orange;
+        }
+        #g1
+        {
+            color: blue;
+
+        }
+        #l
+        {
+            color: green;
+        }
+        #e
+        {
+            color: red;
+        }
+
+        h2
+        {
+            font-size: 35px;
+            
+        }
+
+        #sign_in
+        {
+            font-size: 35px;
+        }
+
+        img
+        {
+            width: 25px; 
+            height: 25px;
+            object-fit: cover; /* the image fills in the circle */
+            border-radius: 50%; /* Makes the image circular */
+            margin-right: 15px;
+           
+        }
+        #mail_id
+        {
+             font-size: 18px;
+             color:blue;
+             font-weight: bold;
+        }
+        .container
+        {
+            
+            margin-left: 280px;
+            display:flex;
+            align-items: center;
+        }
+
+        hr
+        {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        p
+        {
+            font-size: 20px;
+            font-weight:600;
+            margin-bottom: 40px;
+        }
+
+        button
+        {
+            color:white;
+            background-color: rgb(61, 134, 212);
+            font-size: 25px;
+            font-weight: bold;
+            height: 50px;
+            width: 200px; 
+            border-radius: 10px;
+            /* position: absolute; */
+            align-items: center;
+            margin-bottom: 40px;
+           
+        }
+
+        #security_text
+        {
+            color: rgb(86, 85, 85);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #notifications
+        {
+            font-size: 18px;
+            font-weight:800 ;
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section id="main">
+        <h2><span id="g">G</span><span id="o">o</span><span id="o1">o</span><span id="g1">g</span><span id="l">l</span><span id="e">e</span></h2>
+        <h2 id="sign_in">A new sign-in on Mac</h2>
+        <div class="container">
+        <img src="asset/lamp.jpg" alt="Circular Image" >
+        <a id="mail_id" href="https://support.google.com/mail/answer/56256?hl=en" target="_blank">shitalsatpute@gamil.com</a>
+        </div>
+        <hr>
+        <p>We noticed a new sign-in to your Google Account on a Mac device. If this was you, you don't need to do anything. 
+            If not, we'll help you secure your account.</p>
+
+            <!-- below anchor tag open in new tab after click -->
+        <a href="https://support.google.com/mail/answer/56256?hl=en" target="_blank">
+            <button>Check Activity</button>
+          </a>
+            
+        <!-- this button open link in same tab after click...<button onclick="window.location.href='https://support.google.com/mail/answer/56256?hl=en'" >Check Activity</button> -->
+        <p id="security_text">You can also see security activity at</p>
+        <a id="notifications" href="https://myaccount.google.com/notifications" target="_blank">https://myaccount.google.com/notifications </a>
+    
+</body>
+</html>
