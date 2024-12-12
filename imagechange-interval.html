@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  /* Basic styling for the container and images */
+  .slider {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides">
+    <div class="slide"><img src="asset/food.webp" alt="Image 1"></div>
+    <div class="slide"><img src="asset/food2.webp" alt="Image 2"></div>
+    <div class="slide"><img src="asset/light.jpg" alt="Image 3"></div>
+    <div class="slide"><img src="asset/lamp.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="asset/main.png" alt="Image 2"></div>
+    <div class="slide"><img src="asset/background.jpg" alt="Image 3"></div>
+</div>
+</div>
+
+<script>
+  let currentIndex = 0;
+
+  function showNextSlide() {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+
+    currentIndex = (currentIndex + 1) % totalSlides;
+    const offset = -currentIndex * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+  }
+
+  // Change image every 3 seconds
+  setInterval(showNextSlide, 2000);
+</script>
+
+</body>
+</html>

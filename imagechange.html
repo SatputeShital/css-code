@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background with Image Slider Block</title>
+<style>
+  /* Full-page background image */
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Slider block styling */
+  .slider-block {
+    width: 80%;
+    max-width: 500px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<div class="slider-block">
+  <div class="slides">
+    <div class="slide"><img src="asset/background.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="asset/brickswall.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="asset/brown_bricks.jpg" alt="Image 3"></div>
+    <div class="slide"><img src="asset/lamp.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="asset/light.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="asset/Bhog.png" alt="Image 3"></div>
+</div>
+</div>
+
+<script>
+  let currentIndex = 0;
+
+  function showNextSlide() {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+
+    currentIndex = (currentIndex + 1) % totalSlides;
+    const offset = -currentIndex * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+  }
+
+  // Change image every 3 seconds
+  setInterval(showNextSlide, 3000);
+</script>
+
+</body>
+</html>

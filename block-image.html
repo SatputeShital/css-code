@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Image Slider with Overlay Block</title>
+<style>
+  /* Full-screen background container */
+  .background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.5s ease-in-out;
+  }
+
+  /* Block overlay on top of the background */
+  .overlay-block {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Background container with overlay block -->
+<div class="background-container" id="backgroundContainer">
+  <div class="overlay-block">
+    <h2>Overlay Content</h2>
+    <p>This is a block on top of the background image.</p>
+  </div>
+</div>
+
+<script>
+  // Array of background images
+  const backgroundImages = [
+    'url("asset/food.webp")',
+    'url("asset/lamp.jpg")',
+    'url("asset/main.png")',
+    'url("asset/food.webp")',
+    'url("asset/background.jpg")',
+    'url("asset/main.png")'
+  ];
+
+  let currentImageIndex = 0;
+
+  function changeBackgroundImage() {
+    const backgroundContainer = document.getElementById('backgroundContainer');
+    currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+    backgroundContainer.style.backgroundImage = backgroundImages[currentImageIndex];
+  }
+
+  // Change background image every 3 seconds
+  setInterval(changeBackgroundImage, 3000);
+</script>
+
+</body>
+</html>
